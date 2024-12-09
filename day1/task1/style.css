@@ -1,0 +1,33 @@
+body{
+    border: 0.1px solid rgb(14, 9, 52);
+    /* padding: 10px; */
+    margin:1% 15% 1%;
+    /* width: 70%; */
+    border-radius: 10px;
+    
+}
+.headername{
+    margin-bottom: 10px;
+}
+.head{
+    background-color: rgb(3, 3, 52);
+    color: aliceblue;
+    text-align: left;
+    padding: 0 15px 10px 15px;
+    border-radius: 10px;
+}
+img{
+   height: 200px ;
+   width: 150px ;
+   margin-top: 20px;
+   border-radius: 4px ;
+}
+.fullstack{
+    margin: 3px 0;
+}
+.content{
+    padding: 10px;
+}
+p{
+    margin: 0;
+}
