@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess board</title>
+    <!-- favicone link -->
+     <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/chess-icon-1024x1024-l7ql16ml.png" type="image/x-icon">
+
+     <style>
+        body{
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .board{
+            border: 1px solid black; 
+       }
+        .row1{
+            display: flex;                
+        }
+    
+        .row{
+            /* padding: 12px; */
+            font-size: 3rem;
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+        .empty{
+            /* padding: 36px; */
+            /* border: 2px solid black; */
+            width: 5rem ;
+            height: 5rem;
+        }
+        .color1:nth-child(odd){
+            background-color: black;
+            color:aliceblue
+        }
+        .color1:nth-child(even){
+            background-color: rgb(255, 252, 252);
+            
+        }
+        .color2:nth-child(even){
+           background-color: whitesmoke;
+        }
+        .color2:nth-child(even){
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+        }
+        .row:hover{
+            opacity: 1;
+            box-shadow: 2px 2px black;
+            font-size: 4rem;
+        }
+
+        
+        
+     </style>
+
+</head>
+<body>
+    <div class="container">
+    <div class="board">
+        <div class="row1">
+                <div class="row color1">&#9814</div>
+                <div class="row color1">&#9816</div>
+                <div class="row color1">&#9815</div>
+                <div class="row color1">&#9812</div>
+                <div class="row color1">&#9813</div>
+                <div class="row color1">&#9815</div>
+                <div class="row color1">&#9816</div>
+                <div class="row color1">&#9814</div>
+        </div>
+        <div class="row1">
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+            <div class="row color2">&#9817</div>
+    </div>
+    <div class="row1">
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+        <div class="empty color1"></div>
+</div>
+<div class="row1">
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+    <div class="empty color2"></div>
+   
+</div>
+<div class="row1">
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+<div class="empty color1"></div>
+
+</div>      
+<div class="row1">
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+<div class="empty color2"></div>
+
+</div>
+
+<div class="row1">
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+            <div class="row color1">&#9823</div>
+           
+    </div>
+<div class="row1">
+            <div class="row color2">&#9820</div>
+            <div class="row color2">&#9822</div>
+            <div class="row color2">&#9821</div>
+            <div class="row color2">&#9818</div>
+            <div class="row color2">&#9819</div>
+            <div class="row color2">&#9821</div>
+            <div class="row color2">&#9822</div>
+            <div class="row color2">&#9820</div>
+            
+    </div>
+
+
+
+    </div>
+    </div>
+</body>
+</html>
