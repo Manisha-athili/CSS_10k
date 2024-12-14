@@ -8,14 +8,17 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        width: 100%;
         overflow:hidden;
         margin: 0;
         padding: 0;
     }
     .container{
+        position: relative;
         border: 2px solid rgb(29, 197, 82);
         height: 70vh;
-        width: 40%;
+        width: 100%;
+        max-width: 500px; 
         overflow: scroll;
         overflow-x: hidden;
         border-radius: 10px;
@@ -23,15 +26,16 @@
         
       }
     .nav{
-        height: 8%;
-        width: 39.9%;
+        height: 9%;
+        width: 31em;
         margin: 0;
         background-color: rgb(29, 197, 82);
         border-radius: 5px 5px 0 0;
-        position: fixed;
+        position: fixed;  /* stick unte container wedith thiskuntundi ... ? */
         display: flex;
         flex-direction: row;
-        justify-content: space-between;       
+        justify-content: space-between;   
+        overflow-x: hidden;    
     }
       img{
         height: 3rem;
@@ -54,7 +58,7 @@
       }
       .rightnav>i{
         padding: 20px 10px 5px 7px ;
-        font-size: 23px;
+        font-size: 1rem;
         opacity:0.7;
       }
       .rightnav>i:hover{
