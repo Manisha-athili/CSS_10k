@@ -1,0 +1,533 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Diagonal Header Section */
+.diagonal-header {
+    position: fixed; /* Change to fixed so it stays in place */
+    top: 0; /* Ensures it's at the top */
+    left: 0; /* Ensures it's aligned to the left */
+    max-width: 100%;
+    /* height: 100vh; Ensure it takes full viewport height */
+    background: linear-gradient(to bottom right, rgba(74, 144, 226, 0.3), rgba(0, 0, 0, 0.3));
+    z-index: -1; /* Keeps the header in the background */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes{
+    margin-top: auto;
+    margin-bottom: 2em;
+    margin-left: 500px;
+    display: flex;
+    column-gap: 1em;
+}
+.boxes > div {
+
+    border: 2px solid;
+    width: 10px;
+    height: 10px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    /* margin: 0 20px;increase gap between nav links */
+    margin-right: 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Add smooth transition */
+}
+
+.navbar a:hover {
+    color: #8ed5f7; /* Change color on hover */
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.navbar .logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar .logo div {
+    font-size: 1.0rem;
+    font-weight: normal;
+    flex-wrap: wrap;
+    /* margin-top: 10px; */
+}
+
+.navbar .logo strong {
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    /* margin-right: 20px; */
+}
+
+.navbar .nav-links {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* margin-right: 150px; */
+    gap: 20px; /* This can also be used to increase space between the links */
+}
+
+/* Slider Container */
+.slider-container {
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbars */
+}
+
+.slider-section {
+    flex: none;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.slider-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    background: inherit; /* Inherits background from the parent */
+    transform: skewX(-30deg);
+    /* transform: translateX(-200px); */
+    /* transform: matrix(1, 0, -45, 1, -2rem, 0); */
+    transform-origin: 50% -80%; /* Ensures the skew originates from the top left corner */
+    z-index: -1; /* Places the pseudo-element behind content */
+}
+
+/* Adjust section backgrounds to align with diagonal effect */
+#home::before {
+    background: linear-gradient(to bottom right, rgba(0, 1, 1, 0.3), rgba(9, 2, 2, 0.5)), url('diagoona-bg-1.jpg') no-repeat center center / cover;
+    background: linear-gradient(to top left, rgba(197, 222, 237, 0.3), rgba(0, 0, 0, 0.5)), url('diagoona-bg-1.jpg') no-repeat center center / cover;
+}
+
+#about::before {
+    background: linear-gradient(to bottom right, rgba(74, 144, 226, 0.3), rgba(0, 0, 0, 0.5)), url('diagoona-bg-2.jpg') no-repeat center center / cover;
+}
+
+#services::before {
+    background: linear-gradient(to bottom right, rgba(74, 144, 226, 0.3), rgba(0, 0, 0, 0.5)), url('diagoona-bg-3.jpg') no-repeat center center / cover;
+}
+
+#contact::before {
+    background: linear-gradient(to bottom right, rgba(74, 144, 226, 0.3), rgba(0, 0, 0, 0.5)), url('diagoona-bg-4.jpg') no-repeat center center / cover;
+}
+
+/* Position and stacking adjustment for content */
+.slider-section {
+    position: relative; /* Ensure pseudo-elements are properly positioned */
+    z-index: 1; /* Keeps the content above the pseudo-element */
+    overflow: hidden; /* Prevents the skewed background from overflowing */
+}
+
+#home {
+    background: url('diagoona-bg-1.jpg') no-repeat center center / cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    width: 100vw;
+}
+
+/* Content for Home Section - Positioned to the Right */
+.home-content {
+    /* position: absolute; */
+    /* border: 2px solid; */
+    top: 50%;
+    margin-left: auto;
+    margin-right: 1.2em;
+
+    left: 920px;
+    right: 50px;
+    flex: none;
+    transform: translateY(-50% -50%);
+    text-align: left;
+    width: 40%;
+    height: 50%;
+    color: white;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: right;
+    
+}
+
+
+
+.home-content p {
+    font-size: 1.0rem;
+    margin: 10px 0 20px;
+    word-wrap: break-word;
+    /* border: 2px solid; */
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+/* Style for the horizontal line */
+.custom-hr {
+    border: 0; /* Remove default border */
+    position: relative; /* Allow positioning relative to its normal flow */
+    left: 0px; /* Moves the hr 20px to the left */
+    height: 2px; /* Line thickness */
+    background-color: white; /* Line color */
+    margin: 30px 0; /* Space around the line */
+    width: 100%; /* Line width */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Style for the button */
+.custom-button {
+    display: inline-block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 20px; /* Adjust for button size */
+    background-color: #FFFFFF; /* Primary button color */
+    color: #000000; /* Text color */
+    font-size: 1rem; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 2px; /* Slight rounding for rectangle shape */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    margin-top: 150px; /* Add gap between paragraph and button */
+}
+
+
+/* Hover effect for the button */
+.custom-button:hover {
+    background-color: #FFFFFF; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight raise on hover */
+}
+
+
+#about {
+    background: url('diagoona-bg-2.jpg') no-repeat center center / cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ /* Content for About Section - Positioned to the Right */
+ .about-content{
+    margin-left: auto;
+    margin-right: 1.2em;
+    top: 50%;
+    left: 920px;
+    right: 50px;
+    transform: translateY(-50% -50%);
+    text-align: left;
+    color: white;
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.about-content p {
+    font-size: 1.0rem;
+    margin: 10px 0 20px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.para-with-image {
+    display: flex;
+    align-items: center; /* Align images and text vertically */
+    margin-bottom: 20px; /* Add spacing between items */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.para-with-image img {
+    width: 50px; /* Set image width */
+    height: 50px; /* Set image height */
+    margin-right: 15px; /* Add space between the image and paragraph */
+    border-radius: 8px; /* Optional: round the edges of images */
+    object-fit: cover; /* Ensure the image scales nicely */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.para-with-image p {
+    margin: 0; /* Remove default paragraph margin */
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+#services {
+    background: url('diagoona-bg-1.jpg') no-repeat center center / cover;
+    display: flex;
+    position: relative;
+    gap: 20px;/* Space between service items */
+    align-items: flex-end; /* Align content to the right */
+    padding-right: 50px; /* Add padding to the right side */
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ /* Content for Services Section - Positioned to the Right */
+ .services-content{
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    margin-left: auto;
+    margin-right: 1.2em;
+    text-align: left;
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.services-content p {
+    font-size: 1.0rem;
+    margin: 10px 0 20px;
+    word-wrap: break-word;
+}
+
+.service-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Align image and text vertically */
+    gap: 20px; /* Space between image and text */
+    text-align: right;
+    margin-bottom: 10px;
+    right: 20px;
+    width: 100%;
+}
+
+.service-item img {
+   
+    width: 150px; /* Set desired width for the image */
+    height: 150px; /* Set desired height for the image */
+    padding: 20px;
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+    object-fit: cover; /* Ensure image scales proportionally */
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.service-item div {
+    flex-wrap: wrap;
+    margin-top: 5px;
+    max-width: 500px;
+    text-align: left;
+    justify-content: flex-start; /* Ensure consistent alignment */
+}
+
+.service-item.standalone img {
+    margin-top: 50px; 
+    margin-bottom: 20px; /* Add space below the image */
+    width: 150px; /* Slightly larger image for emphasis */
+}
+
+.service-item.right-align{
+    flex-direction: row-reverse;
+}
+
+.standalone{
+    margin-bottom: 10px;
+}
+
+.service-item h2 {
+    margin: 0 0 10px; /* Adjust spacing for headings */
+    font-size: 1.5rem; /* Customize heading size */
+    margin-left: 20dp;
+}
+
+.service-item p {
+    margin: 0; /* Remove default paragraph margin */
+    line-height: 1.5; /* Add line height for readability */
+}
+
+
+
+#contact {
+    background: url('diagoona-bg-3.jpg') no-repeat center center / cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Content for Contact Section - Positioned to the Right */
+.contact-content{
+    top: 50%;
+    left: 920px;
+    right: 50px;
+    transform: translateY(-50% -50%);
+    text-align: left;
+    color: white;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 40%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: 1.2em;
+}
+
+
+.contact-content-txtviews{
+    background-color: rgba(255,255,255,0);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 40%;
+    height: 50%;
+    box-sizing: border-box;
+    flex: none;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-content p {
+    font-size: 1.0rem;
+    margin: 10px 0 20px;
+    word-wrap: break-word;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6); /* Only bottom border visible */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: white; /* Black text */
+    background-color: transparent; /* Fully transparent background */
+    outline: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light gray placeholder text */
+    
+}
+
+.input-field:focus {
+    border-bottom: 2px solid white; /* Highlight bottom border on focus */
+    box-shadow: none; /* Disable box-shadow */
+}
+
+/* For the message textarea box */
+.message-box {
+    height: 100px; /* Default height */
+    resize: vertical; /* Allows vertical resizing */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+/* Style for the button */
+.custom-contact-button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust for button size */
+    background-color: #FFFFFF; /* Primary button color */
+    color: #000000; /* Text color */
+    font-size: 1rem; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 2px; /* Slight rounding for rectangle shape */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    margin-top: 150px; /* Add gap between paragraph and button */
+}
+
+
+/* Hover effect for the button */
+.custom-contact-button:hover {
+    background-color: #FFFFFF; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight raise on hover */
+}
+
+h2{
+    font-size: 2.0rem;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.0rem;
+    margin: 10px 0 0;
+    word-wrap: break-word; /* Ensure words wrap properly within the container */
+}
+
+.navbar a[href^="#"] {
+    cursor: pointer;
+}
