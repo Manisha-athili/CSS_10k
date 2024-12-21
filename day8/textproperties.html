@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex properties</title>
+    <style>
+
+        /* nav bar styling */
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 10px 0 10px;
+            font-size: 20px;
+        }
+        .heading{
+            text-transform:uppercase;
+            font-size:28px;
+        }
+        .heading>span{
+            font-weight: 600;
+        }
+        .list{
+            display: flex;
+            justify-content: space-around;
+            gap: 70px;
+            list-style: none;
+        }
+        .nav>div{
+            display: flex;
+            gap: 40px;
+        }
+        button{
+            font-size: small;
+            height: 40px;
+            width: 130px;
+            border-radius: 20px;
+            background-color: rgb(112, 67, 153);
+            color: aliceblue;
+            border: 0;
+            margin-top: 10px;
+        }
+        /* nav styling end */
+
+        /* content styling */
+        .body{
+            display: flex;
+        }
+        .left{
+            flex-basis: 40%;
+            padding: 40px;
+        }
+        .right{
+            flex-basis: 70%;
+            height: 80vh;
+        }
+
+        /* styling for left part */
+        .p1{
+            font-size: 80px;
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+        }
+        p{
+            margin: 40px 0;
+            font-size: 18px;
+            color: rgb(80, 78, 78);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav">
+            <i class="heading">your <span>Website</span></i>
+            <div>
+                <ul class="list">
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Work</li>
+                    <li>Info</li>
+                </ul>
+                <button type="button">Get Started</button>
+            </div>
+        </div>
+
+
+        <!-- body  -->
+         <div class="body">
+            <!-- left container -->
+            <div class="left">
+                <div class="p1">Website <br> Design</div>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo corrupti quibusdam ex temporibus unde delectus esse, similique ipsum, vitae aliquam, reprehenderit consequuntur! Quibusdam, amet rerum? Reprehenderit repellat consequatur voluptates dolor.</p>
+
+                <button style="font-size: 15px; padding: 10px;"> Button name</button>
+            </div>
+
+            <!-- right container-->
+            
+                <img  class="right" src="https://i0.wp.com/st4.depositphotos.com/1032998/22808/v/1600/depositphotos_228087374-stock-illustration-web-design-studio-website-creation.jpg?ssl=1" alt="">
+
+         </div>
+    </div>
+</body>
+</html>
