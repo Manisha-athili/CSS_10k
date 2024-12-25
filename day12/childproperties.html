@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <!-- link animate.style -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body{
+            border: 3px solid blue;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .box{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .box>div{
+            margin: 10px;
+        padding: 40px;
+        box-shadow: 2px 2px 5px black;
+        text-align: center;
+        border-radius: 4px;
+        color: aliceblue;
+        }
+        .child1:hover, .child2:hover, .child3:hover,.child4:hover, .child5:hover, .child6:hover{
+            box-shadow: 3px 3px 10px 1px whitesmoke;
+            font-family:fantasy;
+            font-size: 30px;
+        }
+        .child1{
+            grid-row: 1/2;
+            grid-column: 1/4;
+            background-image: radial-gradient( circle farthest-corner at 96.1% 7.2%,  rgba(9,178,62,1) 0%, rgba(19,19,19,1) 100.2% );
+        }
+        .child2{
+            grid-row: 2/4;
+            grid-column: 1/2;
+            background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(243,162,42,1) 0.1%, rgba(245,233,0,1) 90% );
+        }
+        .child3{
+            grid-row: 2/3;
+            grid-column: 2/4;
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(105,105,236,1) 0.1%, rgba(31,31,112,1) 100.2% );
+        }
+        .child4{
+            background-image: linear-gradient( 109.6deg, rgba(160,246,133,0.71) 11.3%, rgba(153,239,126,0.75) 49.1%, rgba(83,255,77,1) 100.2% );
+        }
+        .child5{
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(254,113,210,1) 0%, rgba(184,96,255,1) 90% );
+        }
+        .child6{
+            grid-column: 1/4;
+            grid-row: 4/5;
+            background-image: radial-gradient( circle 654px at 0.6% 48%,  rgba(12,170,255,1) 0%, rgba(151,255,129,1) 86.3% );
+        }
+        .child7{
+            grid-column: 1/4;
+            grid-row: 4/5;
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(183,18,52,1) 0%, rgba(139,14,40,1) 99.5% );
+        }
+
+        /* grid child properties */
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child1 animate__animated animate__backInDown animate__slow	2s">Header</div>
+        <div class="child2 animate__animated animate__backInLeft animate__slow	 animate__delay-1s ">asideBar</div>
+        <div class="child3 animate__animated animate__zoomIn animate__slow	 animate__delay-2s ">Content1</div>
+        <div class="child4 animate__animated animate__lightSpeedInRight animate__slow	 animate__delay-1s ">Content2</div>
+        <div class="child5 animate__animated animate__fadeInTopRight animate__slow	 animate__delay-1s ">content3</div>
+        <div class="child6 animate__animated animate__backInUp animate__delay-1s  "  style="color: black; font-size: 30px;">Happy Moments</div>
+
+        <div class=" child7 animate__animated animate__hinge animate__delay-2s animate__slow" >Hangout Here..</div>
+    </div>
+</body>
+</html>
