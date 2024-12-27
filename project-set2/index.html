@@ -20,6 +20,7 @@
         .circle-card{
             position: relative;
             top: 50px;
+            
         }
         .circle-img{
             position: absolute;
@@ -80,6 +81,31 @@
             font-size: x-large;
         }
 
+
+
+        /* Media quries */
+        @media only screen and (max-width:360px)  and (max-width:768px) and  (max-width:369px){
+            .circle{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 60px;
+        }
+        }
+
+        @media only screen and (max-width:768px) {
+            .circle{
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 60px;
+        }
+        }
+        @media only screen and (max-width:992px) and (max-width:768px) and  (max-width:360px){
+            .circle{
+            display: grid;
+            grid-template-columns: auto;
+            row-gap: 60px;
+        }
+        }
         
     </style>
 </head>
