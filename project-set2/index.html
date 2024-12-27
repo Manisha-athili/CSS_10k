@@ -11,6 +11,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
+        body{
+            overflow: hidden;
+            box-sizing: border-box;
+        }
         .circle{
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -35,8 +39,10 @@
             background: rgba(0, 0, 0, 0.3);
         }
         .img-bg{
-            height: 300px;
-            width: 300px;
+            max-height: 300px;
+            max-width: 300px;
+            min-width: 300px;
+            min-height: 300px;
             border-radius: 10px;
             margin: 0;
         }
@@ -84,28 +90,32 @@
 
 
         /* Media quries */
-        @media only screen and (max-width:360px)  and (max-width:768px) and  (max-width:369px){
-            .circle{
-            display: grid;
-            grid-template-columns: auto auto auto;
-            row-gap: 60px;
-        }
-        }
+        @media only screen and (max-width: 576px) {
+    .circle {
+        grid-template-columns: auto;
+    }
+}
 
-        @media only screen and (max-width:768px) {
-            .circle{
-            display: grid;
-            grid-template-columns: auto auto;
-            row-gap: 60px;
-        }
-        }
-        @media only screen and (max-width:992px) and (max-width:768px) and  (max-width:360px){
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .circle {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .circle {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+
+        /* @media only screen and (max-width:992px) and (max-width:768px) and  (max-width:576px){
             .circle{
             display: grid;
             grid-template-columns: auto;
             row-gap: 60px;
         }
-        }
+        } */
         
     </style>
 </head>
