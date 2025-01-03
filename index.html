@@ -1,90 +1,153 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 10K Coders</title>
-    <!-- link css -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1d3557;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f1faee;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .box div {
+            background: #457b9d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .box div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #f1faee;
+        }
+
+        .task-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #a8dadc;
+            color: #1d3557;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .task-button:hover {
+            background: #f1faee;
+            color: #457b9d;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>CSS TASK</h1>
         <div class="box">
-        <div>
-            <h2>Day 1</h2>
-            <a class="task-button" href="day1/task1/task1.html">Task 1</a>
+            <div>
+                <h2>Day 1</h2>
+                <a class="task-button" href="day1/task1/task1.html">Task 1</a>
+            </div>
+            <div>
+                <h2>Day 2</h2>
+                <a class="task-button" href="day2/task2.html">Task 2</a>
+            </div>
+            <div>
+                <h2>Day 3</h2>
+                <a class="task-button" href="day3/index.html">Task 3</a>
+            </div>
+            <div>
+                <h2>Day 4</h2>
+                <a class="task-button" href="day4/main.html">Task 4</a>
+            </div>
+            <div>
+                <h2>Day 5</h2>
+                <a class="task-button" href="day5chat/chat.html">Chat with me here</a>
+            </div>
+            <div>
+                <h2>Day 6</h2>
+                <a class="task-button" href="day6/architect.html">Architect</a>
+            </div>
+            <div>
+                <h2>Day 8</h2>
+                <a class="task-button" href="day8/main.html">Font-text properties flex parent task</a>
+            </div>
+            <div>
+                <h2>Day 9</h2>
+                <a class="task-button" href="day9/flexchildproperties.html">Flex child properties</a>
+            </div>
+            <div>
+                <h2>Positions Task</h2>
+                <a class="task-button" href="positionstask/positions.html">Positions: right left top bottom</a>
+            </div>
+            <div>
+                <h2>Day 10 Revision</h2>
+                <a class="task-button" href="day10/revision.html">10 Revision Task</a>
+            </div>
+            <div>
+                <h2>Day 11 Grid</h2>
+                <a class="task-button" href="day11/grid.html">11 Task</a>
+            </div>
+            <div>
+                <h2>Day 11 Grid Child</h2>
+                <a class="task-button" href="day12/gridChildproperties.html">Child Properties</a>
+            </div>
+            <div>
+                <h2>Grid Child Properties Practice</h2>
+                <a class="task-button" href="day12/childproperties.html">Child Properties with Animations</a>
+            </div>
+            <div>
+                <h2>Project Cards</h2>
+                <a class="task-button" href="day13/webIntegration.html">Cards</a>
+            </div>
+            <div>
+                <h2>Project Circle Menu</h2>
+                <a class="task-button" href="project-set2/index.html">Menu</a>
+            </div>
+            <div>
+                <h2>Glass Menu</h2>
+                <a class="task-button" href="project-set2/menu-background/index.html">Menu</a>
+            </div>
+            <div>
+                <h2>Day 15</h2>
+                <a class="task-button" href="day15/main.html">Task 15</a>
+            </div>
         </div>
-        <div>
-            <h2>Day 2</h2>
-            <a class="task-button" href="day2/task2.html">Task 2</a>
-        </div>
-        <div>
-            <h2>Day 3</h2>
-            <a class="task-button" href="day3/index.html">Task 3</a>
-        </div>
-        <div>
-            <h2>Day 4</h2>
-            <a class="task-button" href="day4/main.html">Task 4</a>
-        </div>
-        <div>
-            <h2>Day 5</h2>
-            <a  class="task-button" href="day5chat/chat.html">Chat with me hear</a>
-        </div>
-        <div>
-            <h2>Day 6</h2>
-            <a  class="task-button" href="day6/architect.html">Architect</a>
-        </div>
-        <div>
-            <h2>Day 8</h2>
-            <a  class="task-button" href="day8/main.html"> Font-text properties flex parent task</a>
-        </div>
-        <div>
-            <h2>Day 9</h2>
-            <a  class="task-button" href="day9/flexchildproperties.html">Flex child properties</a>
-        </div>
-        <div>
-            <h2>Positions Task</h2>
-            <a class="task-button" 
-            href="positionstask/positions.html">Positions : right left top bottom</a>
-        </div>
-        <div>
-            <h2>Day 10 revision</h2>
-            <a  class="task-button" href="day10/revision.html">10 revision task</a>
-        </div>
-        <div>
-            <h2>Day 11 Grid</h2>
-            <a  class="task-button" href="day11/grid.html">11 task</a>
-        </div>
-
-        <div>
-            <h2>Day 11 Grid child</h2>
-            <a  class="task-button" href="day12/gridChildproperties.html">child properties</a>
-        </div>
-        <div>
-            <h2>Grid child properties practice</h2>
-            <a class="task-button" href="day12/childproperties.html">child properties with animations</a>
-        </div>
-        <div>
-            <h2>project-cards</h2>
-            <a class="task-button" href="day13/webIntegration.html"> cards</a>
-        </div>
-
-        <div>
-            <h2>Project-circle-menu</h2>
-            <a class="task-button" href="project-set2/index.html"> menu</a>
-        </div>
-
-        <div>
-            <h2>glass-menu</h2>
-            <a class="task-button" href="project-set2/menu-background/index.html"> menu</a>
-        </div>
-
-
-        
-    </div>
     </div>
 </body>
 </html>
