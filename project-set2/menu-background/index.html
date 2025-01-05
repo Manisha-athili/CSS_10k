@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- Animate.css link -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+
+  <!-- Gsap link  -->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> 
+    <script src="script.js"></script>
+
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: Arial, sans-serif; 
+      overflow-x: hidden;
+      display: flex;
+    }
+    .black-menu{
+      background: rgb(0, 0, 0);
+      height: 100vh;
+      width: 100%;
+      padding: 1%;
+      display: flex;
+      align-items: center;
+    }
+    .menu-icon menu-icon4{
+        width: 40%;  
+    }
+    .menu-icon>img:hover{
+        animation: bounce 1s; 
+    }
+ 
+
+    
+/* cursor stylings */
+ .cursor {
+  z-index: 1000;
+  background-color: rgb(222, 16, 16);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: .25em;
+  padding: .3em .75em .4em;
+  font-size: 1em;
+  line-height: 1.5;
+  transition: opacity .2s;
+  position: fixed;
+  inset: 0% auto auto 0%;
+} 
+
+.cursor p{
+  margin: 0px;
+}
+body:has( [data-cursor]:hover ) .cursor{ opacity: 1; }
+
+
+/* styling for icon using positions*/
+.black-menu-child1{
+  flex-basis: 33.3%;
+  height: 90%;
+  position: relative;
+  text-align: center;
+}
+.black-menu-child3{
+  flex-basis: 33.3%;
+  height: 90%;
+  position: relative;
+}
+.menu-icon{
+  width: 30%;
+}
+.menu-icon1{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.menu-icon2{
+  position: absolute;
+  top: 5%;
+  left: 50%;;
+}
+.menu-icon3{
+  position: absolute;
+  bottom: 35%;
+  left: 40%;
+}
+.menu-icon4{
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+}
+.menu-icon5{
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.black-menu-child2{
+  flex-basis: 30.3%;
+  text-align: center;
+}
+.black-menu-child3{
+  flex-basis: 33.3%;
+  text-align: center;
+}
+/* glass img styling for trasformaiton */
+.glass-img{
+  position: relative;
+  width: 99%;
+  animation: example 3s infinite linear;
+}
+@keyframes example {
+ from{top: -8rem;}
+ to{top: 2rem};
+}
+
+ /* Responsive styles for tablets (768px and below) */
+ @media (max-width: 768px) {
+    .black-menu {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .black-menu-child1,
+    .black-menu-child2,
+    .black-menu-child3 {
+      flex-basis: 100%;
+      height: auto;
+    }
+
+    .menu-icon {
+      width: 30%;
+    }
+
+    .menu-icon1,
+    .menu-icon2,
+    .menu-icon3,
+    .menu-icon4,
+    .menu-icon5 {
+      position: static;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .glass-img {
+      width: 80%;
+      margin: 2px auto;
+    }
+    @keyframes example {
+      from{top: -2rem;}
+      to{top: 2rem};
+    }
+  }
+
+  /* Responsive styles for mobile devices (480px and below) */
+  @media (max-width: 480px) {
+    .menu-icon {
+      width: 30%;
+    }
+
+    .glass-img {
+      width: 70%;
+    }
+    /*  */
+    @keyframes example {
+      from{top: -2rem;}
+      to{top: 2rem};
+    }
+
+    .cursor {
+      font-size: 0.8em;
+    }
+
+    .black-menu {
+      padding: 5%;
+      height: 100%;
+    }
+  }
+
+    </style>
+    
+    </head>
+<body>
+  
+  <div class="black-menu">
+    <div class="black-menu-child1">
+
+    <!-- 1.Chocolate img -->
+        <a data-cursor="Chocolate" href="#" class="">
+            <img src="imgs/chocolate-removebg-preview.png" alt=""  class="menu-icon menu-icon1">
+        </a>
+
+    <!--2. Hazelnut img -->
+      <a data-cursor="Hazelnuts" href="#" class="">
+          <img src="imgs/hazelnut-removebg-preview.png" alt=""  class="menu-icon menu-icon2">
+      </a>     
+
+    <!-- 3.caramel img -->
+      <a data-cursor="Caramel" href="#" class="">
+          <img src="imgs/caramel-removebg-preview.png" alt=""  class="menu-icon menu-icon3">
+       </a>
+   
+    <!-- 4.chikoo img -->
+      <a data-cursor="Chikoo" href="#" class="">
+          <img src="imgs/chikoo-removebg-preview.png" alt="chikoo"  class="menu-icon menu-icon4">
+      </a>
+   
+      <!--  5.banana img -->
+      <a data-cursor="Banana" href="#">
+         <img src="imgs/banana-removebg-preview.png" alt=""  class=" menu-icon menu-icon5">
+      </a>
+
+
+    </div>
+      
+    <div class="black-menu-child2">
+        <!-- glass image is here -->
+        <img src="imgs/glass-img.png" alt="" class="glass-img">
+    </div>
+     
+    <div class="black-menu-child3">
+      <!-- Mango img  -->
+      <a data-cursor="Mango" href="#" class="">
+          <img src="imgs/mango-removebg-preview.png" alt=""  class="menu-icon menu-icon1"></a>
+
+      <!-- Bluebarry -->
+      <a data-cursor="Bluebarry" href="#" class="">
+          <img src="imgs/bluebarry-removebg-preview.png" alt=""  class="menu-icon menu-icon2"></a>
+
+      <!-- Vanllia -->
+      <a data-cursor="Vanllia" href="#" class="">
+          <img src="imgs/vanllia-removebg-preview.png" alt=""  class="menu-icon menu-icon3"></a>
+
+      <!-- Strawberry -->
+      <a data-cursor="Strawberry" href="#" class=" ">
+        <img src="imgs/strawberry-removebg-preview.png" alt=""  class="menu-icon menu-icon4">
+      </a>
+
+      <!-- brownie -->
+      <a data-cursor="Brownie" href="#" class="">
+          <img src="imgs/brownie-removebg-preview.png" alt=""  class="menu-icon menu-icon5">
+      </a>
+    </div>
+                    
+
+
+
+ <div class="cursor">
+  <p>Learn more</p>
+</div> 
+  </div> 
+
+       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+ 
+    </div>
+</body>
+</html>
